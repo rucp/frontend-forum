@@ -1,11 +1,11 @@
-import { Avatar } from './Avatar';
-import { Comment } from './Comment';
+import { Avatar } from '../Avatar/Avatar';
+import { Comment } from '../Comment/Comment';
 import { useState } from 'react';
 
 import {
   publishedDateRelativeToNow,
   generateDatePostFormatted,
-} from './../utils/date';
+} from '../../utils/date';
 
 import styles from './Post.module.css';
 
