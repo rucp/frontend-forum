@@ -84,7 +84,7 @@ const SignUp = () => {
   return (
     <div className={styles.container}>
       <form className={styles.form}>
-        <h1>Faça o seu Cadastro 👋</h1>
+        <h1>Faça seu Cadastro 👋</h1>
         <Input
           name="name"
           placeholder="Digite seu nome"
@@ -93,49 +93,39 @@ const SignUp = () => {
         />
         <Input
           name="email"
-          placeholder="Digite o seu e-mail"
+          placeholder="Digite seu e-mail"
           onChange={handleChange}
           type="email"
         />
         <Input
           name="password"
-          placeholder="Digite sua senha"
+          placeholder="Digite uma senha (mínimo 6 caracteres)"
           onChange={handleChange}
           type="password"
         />
         <Input
           name="confirmPassword"
-          placeholder="Confirme sua senha"
+          placeholder="Confirme a senha"
           onChange={handleChange}
           type="password"
         />
-        <Input
-          name="gender"
-          placeholder="Digite seu gênero"
-          onChange={handleChange}
-          type="text"
-        />
+        
         <Input
           name="ocupation"
           placeholder="Digite sua ocupação"
           onChange={handleChange}
           type="text"
         />
-        <Input
-          name="city"
-          placeholder="Digite sua cidade"
-          onChange={handleChange}
-          type="text"
-        />
+        
         <Button
           type="submit"
-          text="Efetuar Cadastro!"
+          text="Cadastrar"
           onClick={handleSubmit}
           disabled={loading === true || !validatorInput()}
         />
         <div className={styles.subContainerSignUp}>
           <p>Já possui conta?</p>
-          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/login"> Faça Login</NavLink>
         </div>
       </form>
     </div>
