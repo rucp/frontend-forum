@@ -1,5 +1,5 @@
 .sidebar {
-  background: var(--gray-800);
+  background: var(--blue-100);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -19,26 +19,26 @@
 
 .profile strong {
   margin-top: 1rem;
-  color: var(--gray-100);
+  color: var(--white);
   line-height: 1.6;
 }
 
 .profile span {
   font-size: 0.875rem;
-  color: var(--gray-400);
+  color: var(--blue-300);
   line-height: 1.6;
 }
 
 .sidebar footer {
-  border-top: 1px solid var(--gray-600);
+  border-top: 1px solid var(--blue-300);
   margin-top: 1.5rem;
   padding: 1.5rem 2rem 2rem;
 }
 
 .sidebar footer a {
   background: transparent;
-  color: var(--green-500);
-  border: 1px solid var(--green-500);
+  color: var(--blue-300);
+  border: 1px solid var(--blue-300);
   border-radius: 8px;
   height: 50px;
   padding: 0 1.5rem;
@@ -55,6 +55,6 @@
 }
 
 .sidebar footer a:hover {
-  background: var(--green-500);
+  background: var(--blue-300);
   color: var(--white);
 }
