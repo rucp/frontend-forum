@@ -1,0 +1,13 @@
+.container {
+  padding: 30px;
+}
+
+.title {
+  color: rgb(202, 202, 229);
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.inputStyle {
+  background-color: rgba(48, 175, 152, 0.546) !important;
+}

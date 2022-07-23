@@ -1,6 +1,7 @@
 import React from 'react';
-import Login from '../pages/Login';
 import ProtectedRoutes from './ProtectedRoutes';
+import Main from '../pages/Main';
+import Login from '../pages/Login';
 import SignUp from '../pages/SignUp/';
 import styles from './routes.module.css';
 
@@ -57,7 +58,7 @@ const Routering = () => {
   return (
     <Router>
       <Routes>
-        <Route path="*" element={<h1>Página inicial</h1>} />
+        <Route path="*" element={<Main />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route

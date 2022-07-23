@@ -1,0 +1,21 @@
+.containerTopic {
+  width: 500px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 30px;
+  margin: 15px 10px;
+}
+
+.titulo {
+  margin-top: 7px;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+.bottom {
+  margin-top: 7px;
+  display: flex;
+  justify-content: space-between;
+}
