@@ -30,6 +30,18 @@ const FormPost = ({ currentId, setCurrentId }) => {
     } else {
       dispatch(createPost(postData));
     }
+    clear();
+  };
+
+  const clear = () => {
+    setCurrentId(null);
+
+    setPostData({
+      user: '',
+      title: '',
+      message: '',
+      tags: '',
+    });
   };
 
   return (
@@ -40,7 +52,9 @@ const FormPost = ({ currentId, setCurrentId }) => {
         className="digitarClasses"
         onSubmit={handleSubmit}
       >
-        <h1 className={styles.title}>Conte sua experiência</h1>
+        <h1 className={styles.title}>
+          {currentId ? 'Edite' : 'Conte'} sua experiência
+        </h1>
 
         <Input
           name="user"
@@ -74,7 +88,14 @@ const FormPost = ({ currentId, setCurrentId }) => {
           value={postData.tags}
         />
 
-        <button type="submit">Enviar</button>
+        <div className={styles.btnsContainer}>
+          <button type="submit" className={styles.submitBtn}>
+            Enviar
+          </button>
+          <button className={styles.cleanBtn} onClick={clear}>
+            Limpar
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -11,7 +11,7 @@ const Main = () => {
 
   useEffect(() => {
     dispatch(getPosts());
-  }, [dispatch]);
+  }, [currentId, dispatch]);
 
   return (
     <div className={styles.container}>
