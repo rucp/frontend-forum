@@ -1,6 +1,7 @@
 .container {
   display: flex;
-  background-color: red;
+  justify-content: center;
+  /* background-color: red; */
   width: 100%;
 }
 
@@ -8,13 +9,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60%;
-  background-color: yellow;
-  margin: 40px 25px 40px 50px;
+  width: 50%;
+  /* background-color: yellow; */
+  margin: 30px 0px 30px 0px;
 }
 
 .formContainer {
-  width: 30%;
-  background-color: rgb(39, 29, 29);
-  margin: 40px 25px 40px 25px;
+  width: 25%;
+  /* background-color: rgb(58, 36, 183); */
+  margin: 30px 0px 30px 0px;
 }

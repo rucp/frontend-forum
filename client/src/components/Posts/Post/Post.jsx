@@ -1,12 +1,20 @@
 import React from 'react';
 import styles from './Post.module.css';
+import ForumIcon from '@mui/icons-material/Forum';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 import moment from 'moment';
 
-const Post = ({ post }) => (
+const Post = ({ post, setCurrentId }) => (
   <div className={styles.containerTopic}>
-    <div className={styles.tags}>
+    <div className={styles.top}>
       <p> {post.tags.map(tag => `#${tag} `)}</p>
+      <div className={styles.timeAndBtn}>
+        <p>{moment(post.createdAt).fromNow()}</p>
+        <button onClick={() => setCurrentId(post._id)}>
+          <MoreVertIcon />
+        </button>
+      </div>
     </div>
 
     <div className={styles.titulo}>
@@ -14,8 +22,20 @@ const Post = ({ post }) => (
     </div>
 
     <div className={styles.bottom}>
-      <p>20 comentários</p>
-      <p>{post.user}</p>
+      <div>
+        <ForumIcon className={styles.commentIcon} />
+        20 comentários
+      </div>
+
+      <div className={styles.userInfo}>
+        <img
+          src="https://user-images.githubusercontent.com/88854028/180618614-5fda64b0-db6a-4278-9ecf-63f850c583d6.png"
+          width={25}
+          height={25}
+          className={styles.icon}
+        />{' '}
+        <p>{post.user}</p>
+      </div>
     </div>
   </div>
 );

@@ -1,13 +1,41 @@
 .containerTopic {
-  width: 500px;
+  width: 540px;
   border: 1px solid black;
   border-radius: 5px;
   padding: 10px 30px;
   margin: 15px 10px;
+  background-color: var(--gray-800);
+}
+
+.containerTopic:hover {
+  border: 1px solid var(--green-500);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timeAndBtn {
+  display: flex;
+}
+
+.timeAndBtn button {
+  margin-left: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.timeAndBtn button:hover {
+  color: white;
+  opacity: 0.5;
 }
 
 .titulo {
-  margin-top: 7px;
+  margin-top: 10px;
+  color: var(--gray-300);
 }
 
 h1 {
@@ -15,7 +43,29 @@ h1 {
 }
 
 .bottom {
-  margin-top: 7px;
+  margin-top: 14px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.bottom div:nth-child(1) {
+  align-items: center;
+  display: flex;
+}
+
+.commentIcon {
+  margin-right: 7px;
+}
+
+.icon {
+  border: 1px solid rgb(22, 22, 172);
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  color: var(--gray-100);
 }

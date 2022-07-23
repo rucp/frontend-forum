@@ -1,24 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Input } from '../Input';
 import styles from './FormPost.module.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { createPost } from '../../actions/posts';
+import { createPost, updatePost } from '../../actions/posts';
 
-const FormPost = () => {
+const FormPost = ({ currentId, setCurrentId }) => {
   const [postData, setPostData] = useState({
     user: '',
     title: '',
     message: '',
     tags: '',
   });
+  const post = useSelector(state =>
+    currentId ? state.posts.find(p => p._id === currentId) : null,
+  );
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (post) setPostData(post);
+  }, [post]);
 
   const handleSubmit = e => {
     e.preventDefault();
 
-    dispatch(createPost(postData));
+    if (currentId) {
+      dispatch(updatePost(currentId, postData));
+    } else {
+      dispatch(createPost(postData));
+    }
   };
 
   return (
