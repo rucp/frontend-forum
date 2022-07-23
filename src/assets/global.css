@@ -5,6 +5,8 @@
   --blue-200: #1c5078;
   --blue-300: #123652;
 
+  --grey-100: #f0f2f5;
+
   --red-500: #f75A68;
 
 }
@@ -21,7 +23,7 @@
 }
 
 body {
-  background: var(--white);
+  background: var(--grey-100);
   color: var(--white);
   -webkit-font-smoothing: antialiased;
 }
