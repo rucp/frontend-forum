@@ -5,7 +5,9 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Trash } from 'phosphor-react';
 import { useDispatch } from 'react-redux';
 
-import { deletePost } from '../../../actions/posts';
+import { deletePost, likePost } from '../../../actions/posts';
+// we can use likePost in this cointainer if we want
+// () => dispatch(likePost(post._id))
 
 import moment from 'moment';
 

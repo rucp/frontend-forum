@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 import Post from './Post/Post';
 
-const Posts = ({ setCurrentId }) => {
+const PostList = ({ setCurrentId }) => {
   const posts = useSelector(state => state.posts);
 
   console.log(posts);
@@ -23,4 +23,4 @@ const Posts = ({ setCurrentId }) => {
   );
 };
 
-export default Posts;
+export default PostList;

@@ -1,7 +1,7 @@
 import { Header } from './components/Header/Header';
 import Routering from './Routes/routes';
 import './assets/global.css';
-
+import { BrowserRouter } from 'react-router-dom';
 
 // author: {avatar_url: "", name: "", role:""}
 // publishedAt: Date
@@ -17,7 +17,6 @@ import './assets/global.css';
 export function App() {
   return (
     <div>
-      <Header />
       <Routering />
     </div>
   );

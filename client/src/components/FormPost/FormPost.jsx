@@ -84,7 +84,9 @@ const FormPost = ({ currentId, setCurrentId }) => {
         <Input
           name="tags"
           placeholder="Digite até 5 tags"
-          onChange={e => setPostData({ ...postData, tags: e.target.value })}
+          onChange={e =>
+            setPostData({ ...postData, tags: e.target.value.split(',') })
+          }
           value={postData.tags}
         />
 

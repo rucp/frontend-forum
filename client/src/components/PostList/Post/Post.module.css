@@ -4,11 +4,10 @@
   border-radius: 5px;
   padding: 10px 10px 10px 30px;
   margin: 15px 10px;
-  background-color: var(--gray-800);
 }
 
 .containerTopic:hover {
-  border: 1px solid var(--green-500);
+  border: 1px solid var(--blue-100);
 }
 
 .top {

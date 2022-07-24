@@ -1,8 +1,6 @@
 import React from 'react';
 import ProtectedRoutes from './ProtectedRoutes';
 import Main from '../pages/Main';
-import Login from '../pages/Login';
-import SignUp from '../pages/SignUp/';
 import styles from './routes.module.css';
 
 import { Post } from '../components/Post/Post';
@@ -10,6 +8,8 @@ import { Sidebar } from '../components/Sidebar/Sidebar';
 
 import { generateDatePost } from '../utils/date';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Header } from '../components/Header/Header';
+import Auth from '../components/Auth/Auth';
 
 const posts = [
   {
@@ -57,10 +57,10 @@ const posts = [
 const Routering = () => {
   return (
     <Router>
+      <Header />
       <Routes>
         <Route path="*" element={<Main />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/auth" element={<Auth />} />
         <Route
           path="/home"
           element={
