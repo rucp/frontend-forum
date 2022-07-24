@@ -3,6 +3,8 @@ import { Grid, Container, Button, Paper } from '@mui/material';
 import styles from './Auth.module.css';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Input from './Input';
+import { GoogleLogin } from 'react-google-login';
+import Icon from './icon';
 
 const Auth = () => {
   const state = null;
@@ -19,6 +21,15 @@ const Auth = () => {
   const switchMode = () => {
     setIsSignup(prevIsSignup => !prevIsSignup);
     handleShowPassword(false);
+  };
+
+  const googleSucess = async res => {
+    console.log(res);
+  };
+
+  const googleFailure = error => {
+    console.log(error);
+    console.log(`Google Sign In was unsuccessul. Try again later`);
   };
 
   return (
@@ -75,6 +86,7 @@ const Auth = () => {
               type="text"
             />
           </Grid>
+
           <Button
             type="submit"
             fullWidth
@@ -84,6 +96,26 @@ const Auth = () => {
           >
             {isSignup ? 'Cadastrar' : 'Entrar'}
           </Button>
+          {/* FIXME => IMPLEMENT NEW GOOGLE AUTENTICATION */}
+          <GoogleLogin
+            clientId="235121066375-geimdh72qqp756a7v8l1o0i9tgnetlk5.apps.googleusercontent.com"
+            render={renderProps => (
+              <Button
+                className={styles.googleButton}
+                color="primary"
+                fullWidth
+                onClick={renderProps.onClick}
+                disabled={renderProps.disabled}
+                startIcon={<Icon />}
+                variant="contained"
+              >
+                Continuar com google
+              </Button>
+            )}
+            onSucess={googleSucess}
+            onFailure={googleFailure}
+            cookiePolicy="single_host_origin"
+          />
           <Grid container className={styles.bottomQuestion}>
             <Grid item>
               <Button onClick={switchMode}>

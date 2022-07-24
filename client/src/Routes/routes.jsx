@@ -56,33 +56,34 @@ const posts = [
 
 const Routering = () => {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="*" element={<Main />} />
-        <Route path="/auth" element={<Auth />} />
-        <Route
-          path="/home"
-          element={
-            <ProtectedRoutes>
-              <div className={styles.wrapper}>
-                <Sidebar />
-                <main>
-                  {posts.map(post => (
-                    <Post
-                      key={post.id}
-                      author={post.author}
-                      content={post.content}
-                      publishedAt={post.publishedAt}
-                    />
-                  ))}
-                </main>
-              </div>
-            </ProtectedRoutes>
-          }
-        />
-      </Routes>
-    </Router>
+    
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="*" element={<Main />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route
+            path="/home"
+            element={
+              <ProtectedRoutes>
+                <div className={styles.wrapper}>
+                  <Sidebar />
+                  <main>
+                    {posts.map(post => (
+                      <Post
+                        key={post.id}
+                        author={post.author}
+                        content={post.content}
+                        publishedAt={post.publishedAt}
+                      />
+                    ))}
+                  </main>
+                </div>
+              </ProtectedRoutes>
+            }
+          />
+        </Routes>
+      </Router>
   );
 };
 
