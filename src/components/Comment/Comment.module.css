@@ -15,9 +15,9 @@
 }
 
 .commentContent {
-    background: var(--white);
-    border-radius: 8px;
+    border-radius: 7px;
     padding: 1rem;
+    border: 2px solid var(--grey-100);
 }
 
 .commentContent header {
