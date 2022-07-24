@@ -15,9 +15,9 @@
 }
 
 .commentContent {
-    background: var(--gray-700);
-    border-radius: 8px;
+    border-radius: 7px;
     padding: 1rem;
+    border: 2px solid var(--grey-100);
 }
 
 .commentContent header {
@@ -36,13 +36,13 @@
     display: block;
     font-size: 0.75rem;
     line-height: 1.6;
-    color: var(--gray-400);
+    color: var(--blue-300);
 }
 
 .commentContent header button {
     background: transparent;
     border: 0;
-    color: var(--gray-400);
+    color: var(--blue-200);
     cursor: pointer;
     line-height: 0;
     border-radius: 2px;
@@ -54,7 +54,7 @@
 
 .commentContent p {
     margin-top: 1rem;
-    color: var(--gray-300);
+    color: var(--blue-300);
 }
 
 .commentBox footer {
@@ -64,14 +64,14 @@
 .commentBox footer button {
     background: transparent;
     border: 0;
-    color: var(--gray-400);
+    color: var(--blue-300);
     cursor: pointer;
     display: flex;
     align-items: center;
 }
 
 .commentBox footer button:hover {
-    color: var(--green-300); 
+    color: var(--blue-200); 
 }
 
 .commentBox footer button svg {
