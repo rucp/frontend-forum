@@ -2,7 +2,7 @@
   width: 540px;
   border: 1px solid black;
   border-radius: 5px;
-  padding: 10px 30px;
+  padding: 10px 10px 10px 30px;
   margin: 15px 10px;
   background-color: var(--gray-800);
 }
@@ -45,7 +45,7 @@ h1 {
 .bottom {
   margin-top: 14px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -68,4 +68,17 @@ h1 {
   display: flex;
   align-items: center;
   color: var(--gray-100);
+}
+
+.btnTrash {
+  background: transparent;
+  border: 0;
+  color: var(--gray-400);
+  cursor: pointer;
+  line-height: 0;
+  border-radius: 2px;
+}
+
+.btnTrash:hover {
+  color: var(--red-500);
 }
