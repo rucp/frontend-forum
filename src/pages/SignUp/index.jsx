@@ -84,7 +84,7 @@ const SignUp = () => {
   return (
     <div className={styles.container}>
       <form className={styles.form}>
-        <h1>Faça seu Cadastro 👋</h1>
+        <h1>Faça seu Cadastro 📝</h1>
         <Input
           name="name"
           placeholder="Digite seu nome"

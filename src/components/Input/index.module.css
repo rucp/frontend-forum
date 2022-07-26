@@ -1,5 +1,5 @@
 .input {
-  color: #fff;
+  color: #000;
   font-size: 20px;
   background-color: transparent;
   border: 2px solid #6a6a6a;
@@ -10,7 +10,7 @@
 }
 
 .input::placeholder {
-  color: #fff;
+  color: #000;
   font-size: 12px;
   opacity: 0.7;
 }
