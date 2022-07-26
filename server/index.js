@@ -5,6 +5,7 @@ import cors from 'cors'; // enable cross origin requests
 import dotenv from 'dotenv';
 
 import postRoutes from './routes/posts.js';
+import userRoutes from './routes/users.js';
 
 const app = express();
 dotenv.config();
@@ -14,6 +15,7 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 app.use(cors());
 
 app.use('/posts', postRoutes);
+app.use('/user', userRoutes);
 
 // const CONNECTION_URL =
 //   'mongodb+srv://educacao:educacao@cluster0.vbh8n.mongodb.net/?retryWrites=true&w=majority';
