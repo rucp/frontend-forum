@@ -17,7 +17,7 @@
 .textContainer {
   display: flex;
   flex-flow: column wrap;
-  width: 25rem;
+  width: 40rem;
 }
 
 .mainHeading {
@@ -40,17 +40,18 @@
 
 .secondSection {
   height: 90vh;
-  margin: 0 6.25rem;
+  /* margin: 0 6.25rem; */
   display: flex;
   align-items: center;
   padding: 20px 250px;
   flex-direction: column;
+  background-color: #ebdfdf97;
 }
 
 .missionContainer {
   padding: 2rem 0;
   text-align: center;
-  font-size: 2.3rem;
+  font-size: 2.1rem;
   font-family: 'Alata', sans-serif;
   color: var(--blue-100);
   margin-bottom: 20px;
@@ -91,8 +92,8 @@
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
+  background-color: #fff;
 }
-
 
 .thirdHeading {
   color: var(--blue-100);
@@ -102,25 +103,26 @@
   margin-bottom: 2rem;
 }
 
-.thirdText, .strongText {
+.thirdText,
+.strongText {
   color: #000;
   font-family: 'Roboto', sans-serif;
   text-align: center;
   margin: 0.5rem 0;
 }
 
-.thirdText{
+.thirdText {
   font-size: 1.4rem;
 }
 .strongText {
   font-size: 1.6rem;
 }
 
-.textContainer{
+.textContainer {
   margin: 0 5rem;
 }
 
-.footer{
+.footer {
   text-align: center;
   margin: 1rem 0;
 }
