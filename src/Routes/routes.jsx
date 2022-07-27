@@ -111,8 +111,8 @@ const Routering = () => {
 
   function handleCreateNewPosts() {
     event.preventDefault();
-
-    setNewPosts([...newPots, newPostsText]);
+    // setando novo post
+    setNewPosts([newPostsText, ...newPots]);
     setResultMessage('');
 
   }
