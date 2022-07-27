@@ -9,6 +9,7 @@ import { Sidebar } from '../components/Sidebar/Sidebar';
 import { generateDatePost } from '../utils/date';
 import { Avatar } from '../components/Avatar/Avatar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Main from '../pages/Main';
 
 
 
@@ -142,7 +143,7 @@ const Routering = () => {
     
     <Router>
       <Routes>
-        <Route path="/" element={<h1>Página inicial</h1>} />
+        <Route path="/" element={<Main/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route
