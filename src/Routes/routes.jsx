@@ -2,7 +2,7 @@ import React from 'react';
 import Login from '../pages/Login';
 import ProtectedRoutes from './ProtectedRoutes';
 import SignUp from '../pages/SignUp/';
-import Home from '../pages/Home/';
+import Main from '../pages/Main';
 import styles from './routes.module.css';
 
 import { Post } from '../components/Post/Post';
@@ -58,7 +58,7 @@ const Routering = () => {
   return (
     <Router>
       <Routes>
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<Main />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route
