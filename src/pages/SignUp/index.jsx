@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import styles from '../SignUp/index.module.css';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
@@ -13,10 +13,12 @@ import {
 } from '../../utils/validators';
 import UserService from '../../Services/UserService';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { useContextModal } from '../../context/contextCadastro';
 
 const userService = new UserService();
 
 const SignUp = () => {
+  const {isLoggedin} = useContext(useContextModal)
   const [loading, setLoading] = useState();
   const [form, setForm] = useState([]);
   const navigate = useNavigate();
@@ -24,6 +26,9 @@ const SignUp = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
+      if(isLoggedin){
+        return navigate("/home")
+      }
       setLoading(true);
       // const { data } = await userService.register({
       //   name: form.name,

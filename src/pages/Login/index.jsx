@@ -1,29 +1,34 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import UserServices from '../../Services/UserService';
 import styles from '../Login/index.module.css';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 import { validateEmail, validatePassword } from '../../utils/validators';
-import UserService from '../../Services/UserService';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { useContextModal } from '../../context/contextCadastro';
 
-const userService = new UserService();
+//const userService = new UserServices()
 
 const Login = () => {
+
+  const {estaLogado, isLoggedin} = useContext(useContextModal)
   const [loading, setLoading] = useState();
   const [form, setForm] = useState([]);
   const navigate = useNavigate();
+  console.log(form);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async () => {
+   
     try {
-      setLoading(true);
-      const response = await userService.login(form);
-      console.log('response do Login', response);
-      if (response === true) {
+      //const response = await userService.login(form);
+      //console.log('response do Login', response);
         alert('Usuário logado com sucesso!');
+        setLoading(true)
+        estaLogado()
         navigate('/home');
-      }
-      setLoading(false);
+        //const createState = localStorage.setItem('name', isLoggedin)
+        //console.log(createState)
+       
     } catch (err) {
       alert('algo deu errado!' + err);
     }
@@ -56,7 +61,7 @@ const Login = () => {
         <Button
           type="submit"
           text="Entrar!"
-          onClick={handleSubmit}
+          onClick={() => handleSubmit()}
           disabled={loading === true || !validatorInput()}
         />
         <div className={styles.subContainerSign}>

@@ -1,5 +1,5 @@
 // configuração das nossas requisições api
-// instalar o axios
+// instalar o axios;
 
 import axios from 'axios';
 

@@ -1,9 +1,22 @@
+import React, {useContext, useState} from 'react';
 import styles from './Sidebar.module.css';
 import { PencilLine } from 'phosphor-react';
 import { Avatar } from '../Avatar/Avatar';
+import { Button } from '../Button';
+import { useContextPost } from '../../context/contextPost';
 
 export function Sidebar() {
+  const { onClickNewPost} = useContext(useContextPost)
+  const [disabled, setDisabled] = useState(true)
+
+
+  const onClickEditPerfil = () => {
+    alert("Opa, essa função ainda esta sendo desenvolvida!!")
+    setDisabled(false)   
+  }
+
   return (
+    <>
     <aside className={styles.sidebar}>
       <img
         className={styles.cover}
@@ -18,10 +31,19 @@ export function Sidebar() {
       </div>
 
       <footer>
+
         <button title='Ainda estamos em desenvolvimento. Breve traremos essa funcionalidade para você.' href="#" disabled='true'>
           <PencilLine size={20} /> Editar seu perfil
         </button>
+
       </footer>
+      <div className={styles.buttonPost}>
+        <Button
+        text={"Novo Post"}
+        onClick={onClickNewPost}
+        />
+       </div>
     </aside>
+    </>
   );
 }
