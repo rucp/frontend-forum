@@ -1,6 +1,8 @@
+import React, {useState} from 'react';
 import { Header } from './components/Header/Header';
 import Routering from './Routes/routes';
 import './assets/global.css';
+import { useContextModal } from './context/contextCadastro';
 
 
 // author: {avatar_url: "", name: "", role:""}
@@ -15,10 +17,26 @@ import './assets/global.css';
 // console.log(users)
 
 export function App() {
+  const [isLoggedin, setIsLoggedin] = useState(false);
+  const estaLogado = () => {
+    setIsLoggedin(true)
+  }
+  console.log(isLoggedin)
   return (
+    <>
+    <useContextModal.Provider
+    value={
+      {
+        isLoggedin,
+        setIsLoggedin,
+        estaLogado
+      }
+    }>
     <div>
       <Header />
       <Routering />
-    </div>
+   </div>
+   </useContextModal.Provider>
+   </>
   );
 }
