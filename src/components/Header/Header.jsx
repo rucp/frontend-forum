@@ -1,6 +1,6 @@
 import styles from './Header.module.css';
 
-import educaForumLogo from '../../assets/educaforum-logo.png';
+import educaForumLogo from '../../assets/images/educaforum-logo.png';
 
 export function Header() {
   return (
