@@ -14,6 +14,7 @@ export function Post({ author, publishedAt, content }) {
     'Post muito bacana, hein?!'
   ]);
 
+  
   const [newCommentText, setNewCommentText] = useState('')
 
   console.log(newCommentText);

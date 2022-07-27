@@ -57,3 +57,7 @@
 .sidebar footer a:hover {
   opacity: 0.7;
 }
+
+.buttonPost {
+ padding-top: 1.5rem;
+}
