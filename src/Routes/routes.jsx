@@ -2,6 +2,7 @@ import React, {useState, useContext} from 'react';
 import Login from '../pages/Login';
 import ProtectedRoutes from './ProtectedRoutes';
 import SignUp from '../pages/SignUp/';
+import Main from '../pages/Main';
 import styles from './routes.module.css';
 import { useContextPost } from '../context/contextPost';
 import { Post } from '../components/Post/Post';
@@ -142,7 +143,9 @@ const Routering = () => {
     
     <Router>
       <Routes>
-        <Route path="/" element={<h1>Página inicial</h1>} />
+
+        <Route path="*" element={<Main />} />
+
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route

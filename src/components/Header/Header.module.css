@@ -21,9 +21,11 @@
   align-items: center;
   justify-content: center;
   border-radius: 7px;
-  border: 2px solid var(--blue-100);
+  font-family: var(--font-family);   
   transition: 0.2s ease-in-out background;
   background: var(--white);
+  text-decoration: none;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .loginBtn:hover {
