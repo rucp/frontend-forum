@@ -1,0 +1,128 @@
+/* first part of main - section 1 */
+
+.firstSection {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  margin: 0 5rem;
+}
+
+.mainImg {
+  width: 50%;
+}
+
+.textContainer {
+  display: flex;
+  flex-flow: column wrap;
+  width: 40rem;
+}
+
+.mainHeading {
+  font-family: 'Alata', sans-serif;
+  font-size: 4rem;
+  color: var(--blue-100);
+  text-align: center;
+  line-height: 1.6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.522);
+}
+
+.secondaryHeading {
+  font-size: 1.77rem;
+  line-height: 1.6;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+/* second part of main - section 2 */
+
+.secondSection {
+  height: 90vh;
+  /* margin: 0 6.25rem; */
+  display: flex;
+  align-items: center;
+  padding: 20px 250px;
+  flex-direction: column;
+  background-color: #ebdfdf97;
+}
+
+.missionContainer {
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 2.1rem;
+  font-family: 'Alata', sans-serif;
+  color: var(--blue-100);
+  margin-bottom: 20px;
+}
+
+.line {
+  width: 40.62rem;
+  height: 2px;
+  background-color: var(--blue-100);
+  margin-bottom: 30px;
+}
+
+.iconsContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.iconsContainer img {
+  width: 40%;
+}
+
+.iconItens {
+  width: 220px;
+  font-size: 19px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.thirdSection {
+  height: 100vh;
+  display: flex;
+  margin: 0rem 3rem;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.thirdHeading {
+  color: var(--blue-100);
+  font-family: 'Alata', sans-serif;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.thirdText,
+.strongText {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.thirdText {
+  font-size: 1.4rem;
+}
+.strongText {
+  font-size: 1.6rem;
+}
+
+.textContainer {
+  margin: 0 5rem;
+}
+
+.footer {
+  text-align: center;
+  margin: 1rem 0;
+}
