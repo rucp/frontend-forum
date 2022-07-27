@@ -60,6 +60,7 @@ let posts = [
 const Routering = () => {
   const {stateNewPost, onClickNewPost} = useContext(useContextPost);
 
+//usando api estática
   const [newPots, setNewPosts] = useState([{
     id: 1,
     author: {
@@ -84,6 +85,8 @@ const Routering = () => {
   const [contentMessage, setContentMessage] = useState('')
   console.log(newPots)
   console.log(contentMessage)
+  
+  //adicioando post novo
 
   const [newPostsText, setNewPostsText] = useState({
     id: 3,
