@@ -99,7 +99,7 @@ const SignUp = () => {
         />
         <Input
           name="password"
-          placeholder="Digite uma senha (mínimo 6 caracteres)"
+          placeholder="Digite uma senha (mínimo: 6 caracteres)"
           onChange={handleChange}
           type="password"
         />

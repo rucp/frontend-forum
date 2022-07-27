@@ -7,7 +7,6 @@
   align-items: center;
   justify-content: space-around;
   height: 100vh;
-  /* background-color: yellow; */
   margin: 0 5rem;
 }
 
@@ -18,7 +17,6 @@
 .textContainer {
   display: flex;
   flex-flow: column wrap;
-  /* background-color: red; */
   width: 25rem;
 }
 
@@ -41,8 +39,7 @@
 /* second part of main - section 2 */
 
 .secondSection {
-  /* background-color: red; */
-  height: 100vh;
+  height: 90vh;
   margin: 0 6.25rem;
   display: flex;
   align-items: center;
@@ -52,7 +49,6 @@
 
 .missionContainer {
   padding: 2rem 0;
-  /* background-color: yellow; */
   text-align: center;
   font-size: 2.3rem;
   font-family: 'Alata', sans-serif;
@@ -68,10 +64,8 @@
 }
 
 .iconsContainer {
-  /* background-color: orange; */
   display: flex;
   gap: 10px;
-  /* align-items: center; */
   justify-content: center;
 }
 
@@ -80,7 +74,6 @@
 }
 
 .iconItens {
-  /* background-color: yellow; */
   width: 220px;
   font-size: 19px;
   display: flex;
@@ -89,4 +82,45 @@
   align-items: center;
   gap: 20px;
   font-family: 'Roboto', sans-serif;
+}
+
+.thirdSection {
+  height: 100vh;
+  display: flex;
+  margin: 0rem 3rem;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+
+.thirdHeading {
+  color: var(--blue-100);
+  font-family: 'Alata', sans-serif;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.thirdText, .strongText {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.thirdText{
+  font-size: 1.4rem;
+}
+.strongText {
+  font-size: 1.6rem;
+}
+
+.textContainer{
+  margin: 0 5rem;
+}
+
+.footer{
+  text-align: center;
+  margin: 1rem 0;
 }

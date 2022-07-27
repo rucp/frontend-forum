@@ -1,4 +1,5 @@
-import MainImg from './../../../src/assets/images/main-img.jpeg';
+import mainImg from './../../../src/assets/images/main-img.jpeg';
+import secondImg from './../../../src/assets/images/second-img.jpg';
 import share from '../../assets/images/share.png';
 import talk from '../../assets/images/talk.png';
 import like from '../../assets/images/like.png';
@@ -10,7 +11,7 @@ const Main = () => {
     <main>
       <section className={styles.firstSection}>
         <img
-          src={MainImg}
+          src={mainImg}
           alt="dois homens e uma mulher em ambiente virtualizado de aprendizagem "
           className={styles.mainImg}
         />
@@ -48,6 +49,39 @@ const Main = () => {
           </div>
         </div>
       </section>
+      <section className={styles.thirdSection}>
+        <article className={styles.textContainer}>
+          <h2 className={styles.thirdHeading}>
+            Acreditamos que a divulgação também é uma ferramenta democrática.
+          </h2>
+          <p className={styles.thirdText}>
+            Fez parte ou conhece uma iniciativa educacional que deu certo?
+          </p>
+          <h4 className={styles.strongText}>
+            <strong>Compartilhe com todos!</strong>
+          </h4>
+          <p className={styles.thirdText}>
+            Encontrou alguma experiência que pode funcionar em sua realidade?
+          </p>
+          <h4 className={styles.strongText}>
+            <strong>Experimente e compartilhe aqui!</strong>
+          </h4>
+        </article>
+        <img
+          className={styles.secondImg}
+          src={secondImg}
+          alt="Mulher saindo de um frame de celular, conectando-se com garoto através da tela"
+        />
+      </section>
+      <footer className={styles.footer}>
+        <p>
+          <q>A educação deve fazer sentido para as pessoas.</q> -{' '}
+          <em>Paulo Freire</em>
+        </p>
+        <p>
+          Se fez sentido para você, pode fazer sentido para outra pessoa também!
+        </p>
+      </footer>
     </main>
   );
 };
