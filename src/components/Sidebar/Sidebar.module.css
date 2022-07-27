@@ -36,7 +36,7 @@
   padding: 1.5rem 2rem 2rem;
 }
 
-.sidebar footer button {
+.sidebar footer a {
   background: var(--blue-100);
   color: var(--white);
   border-radius: 8px;
@@ -45,8 +45,6 @@
   font-weight: bold;
   display: block;
   text-decoration: none;
-  border: none;
-  cursor: not-allowed;
 
   display: flex;
   align-items: center;

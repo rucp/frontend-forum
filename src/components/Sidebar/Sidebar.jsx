@@ -31,11 +31,10 @@ export function Sidebar() {
       </div>
 
       <footer>
-
-        <button title='Ainda estamos em desenvolvimento. Breve traremos essa funcionalidade para você.' href="#" disabled='true'>
-          <PencilLine size={20} /> Editar seu perfil
-        </button>
-
+        <Button
+        text={"Editar Perfil"}
+        onClick={onClickEditPerfil}
+        />
       </footer>
       <div className={styles.buttonPost}>
         <Button
