@@ -73,3 +73,10 @@
   background: grey;
   opacity: 0.3;
 }
+
+.post {
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 0 0.3em grey;
+  padding: 2.5rem;
+}
