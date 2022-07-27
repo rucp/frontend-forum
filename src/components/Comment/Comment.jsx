@@ -22,7 +22,7 @@ export function Comment({ content, onDeleteComment }) {
     <div className={styles.comment}>
       <Avatar
         hasBorder={false}
-        src="https://avatars.githubusercontent.com/u/52513552?v=4"
+        src="https://img.freepik.com/fotos-gratis/adoravel-adolescente-com-cabelo-encaracolado-posando-em-uma-camiseta-amarela_273609-31333.jpg?w=2000"
         alt=""
       />
 
@@ -30,7 +30,7 @@ export function Comment({ content, onDeleteComment }) {
         <div className={styles.commentContent}>
           <header>
             <div className={styles.authorAndTime}>
-              <strong>Diego Fernandes</strong>
+              <strong>Bruna Amaral</strong>
               <time title="11 de Maio às 08:13" dateTime="2022-05-11 08:13:30">
                 Cerca de 1h atrás
               </time>

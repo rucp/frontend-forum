@@ -18,8 +18,8 @@ let posts = [
   {
     id: 1,
     author: {
-      avatarUrl: 'https://github.com/murillocosta.png',
-      name: 'Murillo Costa',
+      avatarUrl: 'https://yt3.ggpht.com/ytc/AKedOLQ-SSPeGPUUZRdFsO4yIB4WiRIfzBdVCGxGos0AhQ=s900-c-k-c0x00ffffff-no-rj',
+      name: 'Augusto Duarte',
       educationRole: 'Estudante',
     },
     content: [
@@ -38,9 +38,9 @@ let posts = [
   {
     id: 2,
     author: {
-      avatarUrl: 'https://github.com/rucp.png',
-      name: 'Ruan Paulo',
-      educationRole: 'Estudante',
+      avatarUrl: 'https://movimentomulher360.com.br/wp-content/uploads/2019/11/3061622.png',
+      name: 'Paloma Santos',
+      educationRole: 'Professora',
     },
     content: [
       { type: 'paragraph', content: 'Lorem, ipsum dolor sit amet' },
@@ -65,8 +65,8 @@ const Routering = () => {
   const [newPots, setNewPosts] = useState([{
     id: 1,
     author: {
-      avatarUrl: 'https://github.com/murillocosta.png',
-      name: 'Murillo Costa',
+      avatarUrl: 'https://yt3.ggpht.com/ytc/AKedOLQ-SSPeGPUUZRdFsO4yIB4WiRIfzBdVCGxGos0AhQ=s900-c-k-c0x00ffffff-no-rj',
+      name: 'Augusto Duarte',
       educationRole: 'Estudante',
     },
     content: [
@@ -92,8 +92,8 @@ const Routering = () => {
   const [newPostsText, setNewPostsText] = useState({
     id: 3,
     author: {
-      avatarUrl: 'https://github.com/rucp.png',
-      name: 'Ruan Paulo',
+      avatarUrl: 'https://amazonas1.com.br/wp-content/uploads/2018/05/13245307_1712766992275036_1546761691572966281_n.jpg',
+      name: 'Paulo Abreu',
       educationRole: 'Estudante',
     },
     content: [
@@ -156,7 +156,7 @@ const Routering = () => {
                     stateNewPost ? (
                       <div className={styles.Post}>
                         <form onSubmit={handleCreateNewPosts} className={styles.commentForm}>
-                        <strong> Digite seu novo Post</strong>
+                        <strong>Criar novo post:</strong>
     
                          <textarea
                           name="post"
