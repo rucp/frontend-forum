@@ -18,9 +18,9 @@ export function Sidebar() {
       </div>
 
       <footer>
-        <a href="#">
+        <button title='Ainda estamos em desenvolvimento. Breve traremos essa funcionalidade para você.' href="#" disabled='true'>
           <PencilLine size={20} /> Editar seu perfil
-        </a>
+        </button>
       </footer>
     </aside>
   );

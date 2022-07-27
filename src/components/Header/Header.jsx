@@ -6,9 +6,9 @@ export function Header() {
   return (
     <header className={styles.header}>
       <img src={educaForumLogo} alt="Logotipo do EducaFórum" />
-      <div className={styles.loginBtn}>
-        <a href="/login">Login</a>
-      </div>
+      <a className={styles.loginBtn}href="/login">
+        <div>Login</div>
+      </a>
     </header>
   );
 }
