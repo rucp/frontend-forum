@@ -1,13 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import Login from '../pages/Login';
 import ProtectedRoutes from './ProtectedRoutes';
 import SignUp from '../pages/SignUp/';
 import styles from './routes.module.css';
-
-
+import { useContextPost } from '../context/contextPost';
 import { Post } from '../components/Post/Post';
 import { Sidebar } from '../components/Sidebar/Sidebar';
-
 import { generateDatePost } from '../utils/date';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -58,6 +56,7 @@ const posts = [
 ];
 
 const Routering = () => {
+  const {stateNewPost, onClickNewPost} = useContext(useContextPost)
 
   return (
     
@@ -72,6 +71,30 @@ const Routering = () => {
               <div className={styles.wrapper}>
                 <Sidebar />
                 <main>
+                  {
+                    stateNewPost ? (
+                      <>
+                        <form onSubmit={'handleCreateNewComment'} className={styles.commentForm}>
+                        <strong> Digite seu novo Post</strong>
+    
+                         <textarea
+                          name="comment"
+                          placeholder="Deixe um comentário"
+                          value={'newCommentText'}
+                          onChange={'handleNewCommentChange'}
+                          onInvalid={'handleNewCommentInvalid'}
+                          required 
+                        />
+    
+                        <footer>
+                          <button type="submit" disabled={'isNewCommentEmpty'}>
+                            Publicar
+                          </button>
+                        </footer>
+                      </form>
+                    </>
+                    ): ''
+                  }
                   {posts.map(post => (
                     <Post
                       key={post.id}

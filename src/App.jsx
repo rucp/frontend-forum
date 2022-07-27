@@ -3,6 +3,7 @@ import { Header } from './components/Header/Header';
 import Routering from './Routes/routes';
 import './assets/global.css';
 import { useContextModal } from './context/contextCadastro';
+import { useContextPost } from './context/contextPost';
 
 
 // author: {avatar_url: "", name: "", role:""}
@@ -17,7 +18,13 @@ import { useContextModal } from './context/contextCadastro';
 // console.log(users)
 
 export function App() {
+
+  const[stateNewPost, setOnclickNewPost] = useState(false)
   const [isLoggedin, setIsLoggedin] = useState(false);
+
+  const onClickNewPost = () => {
+    setOnclickNewPost(true) 
+  }
   const estaLogado = () => {
     setIsLoggedin(true)
   }
@@ -32,10 +39,16 @@ export function App() {
         estaLogado
       }
     }>
+    <useContextPost.Provider
+    value={{
+      stateNewPost,
+      onClickNewPost
+    }}>
     <div>
       <Header />
       <Routering />
    </div>
+   </useContextPost.Provider>
    </useContextModal.Provider>
    </>
   );
