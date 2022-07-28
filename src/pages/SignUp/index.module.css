@@ -43,3 +43,12 @@
   gap: 0px 20px;
   align-items: center;
 }
+
+.subContainerSignUp .loginBtn {
+  color: var(--blue-100);
+  font-size: 14px;
+}
+
+.subContainerSignUp .loginBtn:hover {
+  color: var(--blue-200);
+}

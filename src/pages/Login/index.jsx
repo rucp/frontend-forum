@@ -10,31 +10,28 @@ import { useContextModal } from '../../context/contextCadastro';
 //const userService = new UserServices()
 
 const Login = () => {
-
-  const {estaLogado, isLoggedin} = useContext(useContextModal)
+  const { estaLogado, isLoggedin } = useContext(useContextModal);
   const [loading, setLoading] = useState();
   const [form, setForm] = useState([]);
   const navigate = useNavigate();
   console.log(form);
 
   const handleSubmit = async () => {
-   
     try {
       //const response = await userService.login(form);
       //console.log('response do Login', response);
-        alert('Usuário logado com sucesso!');
-        setLoading(true)
-        estaLogado()
-        navigate('/home');
-        //const createState = localStorage.setItem('name', isLoggedin)
-        //console.log(createState)
-       
+      alert('Usuário logado com sucesso!');
+      setLoading(true);
+      estaLogado();
+      navigate('/home');
+      //const createState = localStorage.setItem('name', isLoggedin)
+      //console.log(createState)
     } catch (err) {
       alert('algo deu errado!' + err);
     }
   };
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     setForm({ ...form, [event.target.name]: event.target.value });
   };
 
@@ -66,7 +63,9 @@ const Login = () => {
         />
         <div className={styles.subContainerSign}>
           <p>Não possui conta?</p>
-          <NavLink to="/signup">Cadastrar</NavLink>
+          <NavLink to="/signup">
+            <p className={styles.signupBtn}>Cadastrar</p>
+          </NavLink>
         </div>
       </form>
     </div>
