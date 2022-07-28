@@ -10,9 +10,9 @@ export function Header() {
   return (
     <Router>
       <header className={styles.header}>
-        <Link to="/">
+        <a href="/">
           <img src={educaForumLogo} alt="Logotipo do EducaFórum" />
-        </Link>
+        </a>
 
         <div className={styles.loginBtn}>
           {isLoggedin ? <a href="/">Sair</a> : <a href="/login">Login</a>}

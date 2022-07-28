@@ -1,10 +1,11 @@
 .header {
-  background: var(--blue-100);
+  /* background: var(--blue-100); */
+  background-image: linear-gradient(to right, var(--blue-200), var(--blue-100));
   display: flex;
   justify-content: space-between;
   height: 80px;
   padding: 0.75rem 0;
-  box-shadow: 0 0 0.3em grey;
+  /* box-shadow: 0 0 0.3em grey; */
   align-items: center;
 }
 
