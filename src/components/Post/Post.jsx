@@ -1,38 +1,49 @@
 import { Avatar } from '../Avatar/Avatar';
 import { Comment } from '../Comment/Comment';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   publishedDateRelativeToNow,
   generateDatePostFormatted,
 } from '../../utils/date';
 
+import UserServices from '../../Services/UserService';
+
 import styles from './Post.module.css';
 
-export function Post({ author, publishedAt, content }) {
-  const [comments, setComments] = useState([
-    'Post muito bacana, hein?!'
-  ]);
+const userService = new UserServices();
 
+export function Post({ author, publishedAt, content, commentsParam, postID }) {
+  const [comments, setComments] = useState([]);
   const [newCommentText, setNewCommentText] = useState('')
 
-  function handleCreateNewComment() {
+  useEffect(() => {
+    if (comments.length === 0)
+      setComments(commentsParam) 
+  },[comments]);
+
+  async function handleCreateNewComment() {
     event.preventDefault();
-    setComments([...comments, newCommentText]);
+    const inserted = await userService.createComment({"postId": postID,"message": newCommentText});
+    setComments([...comments, {"id": inserted.data.id, "message": newCommentText}])
     setNewCommentText('');
   }
 
   function handleNewCommentChange() {
     event.target.setCustomValidity('');
     setNewCommentText(event.target.value);
+    
   }
 
   function handleNewCommentInvalid() {
     event.target.setCustomValidity('Esse campo é obrigatório!');
   }
   function deleteComment(commentToDelete) {
+    console.log('id a deletar', commentToDelete)
+    console.log('comentarios', comments)
     const commentsWithoutDeletedOne = comments.filter(comment => {
-      return comment !== commentToDelete; 
+      return comment.id !== commentToDelete; 
     })
+    console.log('apos delete',commentsWithoutDeletedOne)
     setComments(commentsWithoutDeletedOne);
   }
   const isNewCommentEmpty = newCommentText.length === 0;
@@ -79,9 +90,10 @@ export function Post({ author, publishedAt, content }) {
         {comments.map(comment => {
           return (
             <Comment 
-              key={comment} 
-              content={comment} 
+              key={comment.id} 
+              content={comment.message} 
               onDeleteComment={deleteComment}
+              commentID={comment.id} 
             />
           )
         })}

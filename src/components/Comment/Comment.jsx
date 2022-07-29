@@ -2,13 +2,17 @@ import { ThumbsUp, Trash, TrashSimple } from 'phosphor-react';
 import { useState } from 'react';
 import { Avatar } from '../Avatar/Avatar';
 import styles from './Comment.module.css';
+import UserServices from '../../Services/UserService';
 
-export function Comment({ content, onDeleteComment }) {
+const userService = new UserServices();
+
+export function Comment({ content, commentID, onDeleteComment }) {
   const [likeCount, setLikeCount] = useState(0);
   const [thumbsToogle, setThumbsToogle] = useState(false);
 
   function handleDeleteComment() {
-    onDeleteComment(content);
+    onDeleteComment(commentID);
+    userService.deleteComment(commentID)
   }
 
   function handleLikeComment() {

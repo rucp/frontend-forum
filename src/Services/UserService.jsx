@@ -59,6 +59,28 @@ export default class UserServices {
     return ret;
   }
 
+  async createComment(dados) {
+    const customConfig = {
+      headers: {
+        'Content-Type': 'application/json',
+        'authorization': localStorage.getItem('acess_token')
+      }
+    };
+    const  ret  = await this.axios.post('/comments', dados, customConfig); 
+    return ret;
+  }
+
+  async deleteComment(commentID) {
+    const customConfig = {
+      headers: {
+        'Content-Type': 'application/json',
+        'authorization': localStorage.getItem('acess_token')
+      }
+    };
+    const  ret  = await this.axios.delete(`/comments/${commentID}`,  customConfig); 
+    return ret;
+  }
+
   async getAllPosts() {
     const  ret  = await this.axios.get('/posts'); 
     return ret;
