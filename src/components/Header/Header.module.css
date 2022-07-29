@@ -42,3 +42,38 @@
 .loginBtn:hover a {
   color: var(--blue-100);
 }
+
+/* barra de pesquisa */
+.searchBar {
+  width: 100%;
+  max-width: 700px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  padding: 10px 20px;
+}
+
+.searchBar input {
+  background: transparent;
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0px 16px;
+  font-size: 20px;
+  resize: none;
+  color: #c1beff;
+}
+
+.searchBar input:hover {
+  border: 0;
+  outline: none;
+  border-style: none;
+}
+
+.btnSearch {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+}
