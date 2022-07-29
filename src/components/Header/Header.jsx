@@ -1,13 +1,22 @@
 import styles from './Header.module.css';
 
 import educaForumLogo from '../../assets/images/educaforum-logo.png';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { useContextModal } from '../../context/contextCadastro';
+import UserServices from '../../Services/UserService';
+
+const userServices = new UserServices();
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { SearchOutlined } from '@ant-design/icons';
 
 export function Header() {
+  const isLoged = userServices.isAuthenticated();
   const { isLoggedin } = useContext(useContextModal);
+
+  if (isLoggedin === false) {
+    userServices.logout();
+  }
+  console.log('logado', isLoged);
   return (
     <Router>
       <header className={styles.header}>

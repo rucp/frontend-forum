@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Header } from './components/Header/Header';
-import Routering from './Routes/routes';
+import { Routering } from './Routes/routes';
 import './assets/global.css';
 import { useContextModal } from './context/contextCadastro';
 import { useContextPost } from './context/contextPost';
@@ -28,7 +28,7 @@ export function App() {
   const estaLogado = () => {
     setIsLoggedin(true)
   }
-  console.log(isLoggedin)
+
   return (
     <>
     <useContextModal.Provider

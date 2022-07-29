@@ -26,40 +26,22 @@ const SignUp = () => {
   const handleSubmit = async event => {
     event.preventDefault();
     try {
-      if (isLoggedin) {
-        return navigate('/home');
+      if(isLoggedin){
+        return alert('usuario ja logado')
       }
       setLoading(true);
-      // const { data } = await userService.register({
-      //   name: form.name,
-      //   email: form.email,
-      //   password: form.password,
-      //   confirm: form.confirm,
-      //   gender: form.gender,
-      //   ocupation: form.ocupation,
-      //   city: form.city,
-      // });
-
-      const data = {
+      const data  = await userService.register({
         name: form.name,
         email: form.email,
         password: form.password,
-        confirm: form.confirm,
-        gender: form.gender,
+        passwordConfirmation: form.confirmPassword,
         ocupation: form.ocupation,
-        city: form.city,
-      };
+        roleId: 1
+      });
 
       if (data) {
-        const responseLogin = await userService.login({
-          email: form.email,
-          password: form.password,
-        });
-
-        if (responseLogin === true) {
           alert('Usuário Cadastrado com sucesso!');
-          navigate('/home');
-        }
+          navigate('/login');
       }
       setLoading(false);
     } catch (err) {
@@ -79,12 +61,12 @@ const SignUp = () => {
     );
   };
 
-  // validateConfirmPassword(form.password, form.confirm)
-  //     validateCity(form.city) &&
-  //      &&
-  //     validateGender(form.gender) &&
-  //      &&
-  //     validateOcupation(form.ocupation)
+  validateConfirmPassword(form.password, form.confirm)
+      validateCity(form.city) &&
+  
+      validateGender(form.gender) &&
+     
+      validateOcupation(form.ocupation)
 
   return (
     <div className={styles.container}>
