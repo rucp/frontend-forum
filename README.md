@@ -43,10 +43,10 @@ Realizar conexão entre educadores e estudantes onde estes podem:
 As seguintes ferramentas foram usadas na construção do projeto:
 
 #### **Frontend** 
-- HTML, JAVASCRIPT, CSS, REACT
+- HTML, JavaScript, CSS, ReactJS, Axios
 
 #### **Back-end**
-- 
+- NodeJS, Express, Typescript, TypeORM, JsonWebToken
 
 # 👷 Como rodar
 
