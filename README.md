@@ -1,4 +1,4 @@
-<img src="https://user-images.githubusercontent.com/88854028/181820810-6cd1a104-f9b1-41e2-af52-2bb10f020edb.png" alt="Logomarca Educ@Fórum"> 
+<img src="https://user-images.githubusercontent.com/88854028/181830836-4c8b4a67-4b8e-400e-8464-f833603b33f5.png" alt="Logomarca Educ@Fórum"> 
  <br>
  <br>
  
@@ -6,7 +6,6 @@
 
 Vem Ser Tech é um programa educacional promovido pelo iFood em parceria com a instituição de ensino Let's Code. <br>
 Para poder ingressar no programa o aluno foi submetido a realizar um processo seletivo com o intuito de ser um dos 80 selecionados que fariam o curso de completo de Desenvolvimento Web Full Stack.
-
 <br>
 
 ## 💻 Sobre o projeto
