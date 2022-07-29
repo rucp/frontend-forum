@@ -50,7 +50,7 @@
   background-color: #fff;
   display: flex;
   align-items: center;
-  border-radius: 3px;
+  border-radius: 7px;
   padding: 10px 20px;
 }
 
@@ -76,4 +76,17 @@
   background: transparent;
   cursor: pointer;
   font-size: 20px;
+}
+
+/*   responsividade para telas de até 1007px    */
+
+@media (max-width: 1007px) {
+}
+
+/* resp para telas mobile, até 640px */
+
+@media (max-width: 640px) {
+  .searchBar {
+    display: none;
+  }
 }

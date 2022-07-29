@@ -85,6 +85,8 @@
   font-family: 'Roboto', sans-serif;
 }
 
+/* third part of main - section 3 */
+
 .thirdSection {
   height: 100vh;
   display: flex;
@@ -114,6 +116,7 @@
 .thirdText {
   font-size: 1.4rem;
 }
+
 .strongText {
   font-size: 1.6rem;
 }
@@ -125,4 +128,148 @@
 .footer {
   text-align: center;
   margin: 1rem 0;
+}
+
+/*   === responsividade para telas de até 1007px  ===  */
+
+@media (max-width: 1007px) {
+  /* section 1*/
+  .firstSection {
+    margin: 0 3rem;
+    height: 75vh;
+  }
+
+  .mainImg {
+    width: 40%;
+  }
+
+  .mainHeading {
+    font-size: 3.5rem;
+  }
+
+  .secondaryHeading {
+    font-size: 1.6rem;
+  }
+
+  /* section 2 */
+
+  .secondSection {
+    height: 75vh;
+    /* margin: 0 6.25rem; */
+    display: flex;
+    align-items: center;
+    padding: 20px 130px;
+    flex-direction: column;
+    background-color: #ebdfdf97;
+  }
+
+  .missionContainer {
+    font-size: 1.77rem;
+  }
+
+  .iconItens img {
+    width: 30%;
+  }
+  .iconItens h3 {
+    font-size: 17px;
+  }
+
+  /* section 3*/
+
+  .thirdSection {
+    height: 73vh;
+  }
+
+  .thirdSection img {
+    width: 30%;
+  }
+
+  .thirdHeading {
+    font-size: 1.7rem;
+  }
+
+  .thirdText {
+    font-size: 1.1rem;
+  }
+
+  .strongText {
+    font-size: 1.3rem;
+  }
+}
+
+/*   === responsividade para telas de até 683px  ===  */
+
+@media (max-width: 683px) {
+  /* section 2*/
+  .secondSection {
+    height: auto;
+  }
+
+  .secondSection img {
+    width: 40%;
+  }
+
+  .iconsContainer {
+    flex-direction: column;
+  }
+}
+
+/* responsividade para telas de até 640px  */
+
+@media (max-width: 640px) {
+  body {
+    margin-bottom: 5rem;
+  }
+  /* section 1 */
+
+  .firstSection {
+    flex-direction: column;
+    height: auto;
+    margin: 0;
+  }
+
+  .mainImg {
+    width: 90%;
+  }
+
+  .mainHeading {
+    font-size: 2.2rem;
+  }
+
+  .secondaryHeading {
+    font-size: 1.3rem;
+    width: auto;
+  }
+
+  .textContainer {
+    width: auto;
+    margin: auto;
+  }
+
+  /* section 2*/
+
+  .secondSection {
+    width: auto;
+    height: auto;
+    padding: 30px;
+  }
+
+  .secondSection img {
+    width: 20%;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .missionContainer {
+    font-size: 1.3rem;
+  }
+
+  /* section 3*/
+
+  .thirdSection {
+    height: auto;
+    flex-direction: column;
+  }
 }
