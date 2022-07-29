@@ -16,7 +16,7 @@ export function Header() {
   if (isLoggedin === false) {
     userServices.logout();
   }
-  console.log('logado', isLoged);
+
   return (
     <Router>
       <header className={styles.header}>

@@ -5,7 +5,7 @@ import UserServices from '../Services/UserService';
 const userService = new UserServices();
 
 const ProtectedRoutes = ({ children }) => {
-  console.log('Children', children);
+
   const userAuthenticated = userService.isAuthenticated();
   return userAuthenticated ? children : <Routering />;
 };

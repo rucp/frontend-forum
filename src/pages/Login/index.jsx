@@ -14,13 +14,10 @@ const Login = () => {
   const [loading, setLoading] = useState();
   const [form, setForm] = useState([]);
   const navigate = useNavigate();
-  console.log(form);
-
+ 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      console.log('email:', form.email)
-      console.log('senha:', form.password)
       const data = await userService.login({
         email: form.email,
         password: form.password,

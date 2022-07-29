@@ -10,6 +10,7 @@ import { generateDatePost } from '../utils/date';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Main } from '../pages/Main';
 import UserServices from '../Services/UserService';
+import { useEffect } from 'react';
 
 const userService = new UserServices();
 
@@ -17,7 +18,7 @@ const Routering = () => {
   const {stateNewPost, onClickNewPost} = useContext(useContextPost);
   const [resultMessage, setResultMessage] = useState('')
   const [contentMessage, setContentMessage] = useState('')
-  const [postsState, setPostsState] = useState(["Mensagem Fixa"])
+  const [postsState, setPostsState] = useState([])
 
   const baseObject = {
       id: 1,
@@ -28,13 +29,32 @@ const Routering = () => {
       },
       content: '',
       publishedAt: generateDatePost(),
+      comments: [],
   }
+
+  const getAllPosts = () => {
+    try {
+      const getPostsApi = userService.getAllPosts().then((response) =>{
+        setPostsState(response.data)
+      }
+      ).catch((err) => {
+        console.log(err)
+      })   
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    getAllPosts()
+  },[]);
   
-  function handleCreateNewPosts() {
+  async function handleCreateNewPosts() {
     event.preventDefault();
     // setando novo post
-    setPostsState([contentMessage, ...postsState]);
-    userService.createPost(contentMessage)
+    //setPostsState([contentMessage, ...postsState]);
+    await userService.createPost(contentMessage)
+    getAllPosts()
     setResultMessage('');
 
   }
@@ -88,17 +108,26 @@ const Routering = () => {
                     ): ''
                   }
                   <div style={{marginBottom: "1.5rem"}}></div>
-                  {postsState.map(post => {
-                    let copyObject = baseObject
-                    copyObject.content = post
-                    copyObject.author.name = localStorage.getItem('nome')
-                    console.log('objcopyt',copyObject)
-                    return <Post
-                      key={copyObject.id}
-                      author={copyObject.author}
-                      content={copyObject.content}
-                      publishedAt={copyObject.publishedAt}
-                    />
+                  {postsState
+                    .sort((a,b) => {
+                      return a.id - b.id
+                    })
+                    .reverse()
+                    .map(post => {
+                      let copyObject = baseObject
+                      copyObject.id = post.id
+                      copyObject.content = post.message
+                      copyObject.author.name = post.user.name
+                      copyObject.author.educationRole = post.user.ocupation
+                      copyObject.comments = post.comments
+                      return <Post
+                        key={copyObject.id}
+                        author={copyObject.author}
+                        content={copyObject.content}
+                        publishedAt={copyObject.publishedAt}
+                        commentsParam={copyObject.comments}
+                        postID={copyObject.id}
+                      />
                   })}
                 </main>
               </div>

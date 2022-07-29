@@ -6,17 +6,6 @@ import { useContextModal } from './context/contextCadastro';
 import { useContextPost } from './context/contextPost';
 
 
-// author: {avatar_url: "", name: "", role:""}
-// publishedAt: Date
-// content: String
-
-// const users = fetch('./src/MOCK/MOCK_DATA.json', {
-//   headers: {
-//     Accept: "application/json"
-//   }
-// }).then(res => res.json())
-// console.log(users)
-
 export function App() {
 
   const[stateNewPost, setOnclickNewPost] = useState(false)
