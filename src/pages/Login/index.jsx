@@ -7,7 +7,7 @@ import { validateEmail, validatePassword } from '../../utils/validators';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useContextModal } from '../../context/contextCadastro';
 
-//const userService = new UserServices()
+const userService = new UserServices()
 
 const Login = () => {
 
@@ -17,18 +17,21 @@ const Login = () => {
   const navigate = useNavigate();
   console.log(form);
 
-  const handleSubmit = async () => {
-   
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     try {
-      //const response = await userService.login(form);
-      //console.log('response do Login', response);
+      console.log('email:', form.email)
+      console.log('senha:', form.password)
+      const data = await userService.login({
+        email: form.email,
+        password: form.password,
+      });
+      if(data){
         alert('Usuário logado com sucesso!');
         setLoading(true)
         estaLogado()
         navigate('/home');
-        //const createState = localStorage.setItem('name', isLoggedin)
-        //console.log(createState)
-       
+      }
     } catch (err) {
       alert('algo deu errado!' + err);
     }
@@ -61,7 +64,7 @@ const Login = () => {
         <Button
           type="submit"
           text="Entrar!"
-          onClick={() => handleSubmit()}
+          onClick={handleSubmit}
           disabled={loading === true || !validatorInput()}
         />
         <div className={styles.subContainerSign}>

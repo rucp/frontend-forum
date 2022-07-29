@@ -26,8 +26,8 @@ export function Sidebar() {
 
       <div className={styles.profile}>
         <Avatar src="https://avatars.githubusercontent.com/u/39747516?v=4.png" />
-        <strong>Jaque Laurenti</strong>
-        <span>Professora</span>
+        <strong>{localStorage.getItem('nome')}</strong>
+        <span>{localStorage.getItem('profissao')}</span>
       </div>
 
       <footer>

@@ -2,50 +2,65 @@
 // instalar o axios;
 
 import axios from 'axios';
-
+import { useNavigate } from 'react-router-dom';
 export default class UserServices {
   constructor() {
     this.axios = axios.create({
-      baseURL: import.meta.env.VITE_APP_API_LOGIN,
+      baseURL: "https://forum-db-lets-code.herokuapp.com",
     });
   }
-
   async login(dados) {
-    // const { data } = await this.axios.post('/login', dados); => pra quando a api estiver funcionando
-    
-    let data = {
-      user: {
-        name: '',
-        email: '',
-        token: '',
-      },
+    const customConfig = {
+      headers: {
+        'Content-Type': 'application/json'
+      }
     };
 
-    if (data) {
-      localStorage.setItem('nome', data.user.name);
-      localStorage.setItem('email', data.user.email);
-      localStorage.setItem(
-        'token',
-        data.user.token
-      ); /* dentro da api, o token está dentro de token.token */
-
-      return true;
+    const  ret  = await this.axios.post('/login', JSON.stringify(dados), customConfig); 
+    console.log('RETORNO LOGIN',ret)
+    if (ret.status === 201) {
+      localStorage.setItem('nome', ret.data.name);
+      localStorage.setItem('email', ret.data.email);
+      localStorage.setItem('profissao', ret.data.ocupation);
+      localStorage.setItem('acess_token', ret.data.access_token); /* dentro da api, o token está dentro de token.token */
     }
-    return;
+    return ret
   }
 
   async register(dados) {
-    return this.axios.post('/user', dados);
+    let variavel = await this.axios.post('/users', dados)
+    console.log(variavel)
+    return variavel
+    
   }
 
-  userAuthenticated() {
-    return localStorage.getItem('token') != undefined ? true : false;
+  isAuthenticated() {
+    return localStorage.getItem('acess_token') != undefined ? true : false;
   }
-
+  
   // implementar um butão que chama essa função dentro da página Home para que o usuário possa sair
   async logout() {
-    localStorage.removeItem('token');
+  
+    localStorage.removeItem('acess_token');
     localStorage.removeItem('nome');
     localStorage.removeItem('email');
+    localStorage.removeItem('profissao');
+  
+  }
+
+  async createPost(dados){
+    const customConfig = {
+      headers: {
+        'Content-Type': 'application/json',
+        'authorization': localStorage.getItem('acess_token')
+      }
+    };
+    const  ret  = await this.axios.post('/posts', {'message': dados}, customConfig); 
+    return ret;
+  }
+
+  async getAllPosts() {
+    const  ret  = await this.axios.get('/posts'); 
+    return ret;
   }
 }

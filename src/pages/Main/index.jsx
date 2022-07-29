@@ -3,7 +3,6 @@ import secondImg from './../../../src/assets/images/second-img.jpg';
 import share from '../../assets/images/share.png';
 import talk from '../../assets/images/talk.png';
 import like from '../../assets/images/like.png';
-
 import styles from './index.module.css';
 
 const Main = () => {
@@ -86,4 +85,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export { Main };
