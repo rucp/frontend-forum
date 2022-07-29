@@ -25,7 +25,7 @@ export function Sidebar() {
       />
 
       <div className={styles.profile}>
-        <Avatar src="https://avatars.githubusercontent.com/u/39747516?v=4.png" />
+        <Avatar src="https://lead.umn.edu/sites/lead.umn.edu/files/2020-04/default-user-icon.jpg" />
         <strong>{localStorage.getItem('nome')}</strong>
         <span>{localStorage.getItem('profissao')}</span>
       </div>

@@ -25,8 +25,8 @@ export function Header() {
         </a>
 
         <form action="" className={styles.searchBar}>
-          <input type="text" placeholder="faça sua busca" name="" />
-          <button type="button" className={styles.btnSearch}>
+          <input title="Opa, essa função ainda está sendo desenvolvida!!" disabled type="text" placeholder="faça sua busca" name="" />
+          <button title="Opa, essa função ainda está sendo desenvolvida!!" disabled type="button" className={styles.btnSearch}>
             <SearchOutlined />
           </button>
         </form>

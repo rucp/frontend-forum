@@ -63,6 +63,7 @@
   font-size: 20px;
   resize: none;
   color: #c1beff;
+  cursor: not-allowed;
 }
 
 .searchBar input:hover {
@@ -71,11 +72,13 @@
   border-style: none;
 }
 
+
 .btnSearch {
   border: none;
   background: transparent;
-  cursor: pointer;
+  cursor: not-allowed;
   font-size: 20px;
+  
 }
 
 /*   responsividade para telas de até 1007px    */
