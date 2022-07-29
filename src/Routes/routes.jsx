@@ -36,7 +36,6 @@ const Routering = () => {
     try {
       const getPostsApi = userService.getAllPosts().then((response) =>{
         setPostsState(response.data)
-        console.log(response.data)
       }
       ).catch((err) => {
         console.log(err)

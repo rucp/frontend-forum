@@ -17,7 +17,6 @@ export default class UserServices {
     };
 
     const  ret  = await this.axios.post('/login', JSON.stringify(dados), customConfig); 
-    console.log('RETORNO LOGIN',ret)
     if (ret.status === 201) {
       localStorage.setItem('nome', ret.data.name);
       localStorage.setItem('email', ret.data.email);
@@ -29,7 +28,6 @@ export default class UserServices {
 
   async register(dados) {
     let variavel = await this.axios.post('/users', dados)
-    console.log(variavel)
     return variavel
     
   }
