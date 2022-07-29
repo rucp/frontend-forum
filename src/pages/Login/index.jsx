@@ -10,8 +10,7 @@ import { useContextModal } from '../../context/contextCadastro';
 const userService = new UserServices()
 
 const Login = () => {
-
-  const {estaLogado, isLoggedin} = useContext(useContextModal)
+  const { estaLogado, isLoggedin } = useContext(useContextModal);
   const [loading, setLoading] = useState();
   const [form, setForm] = useState([]);
   const navigate = useNavigate();
@@ -37,7 +36,7 @@ const Login = () => {
     }
   };
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     setForm({ ...form, [event.target.name]: event.target.value });
   };
 
@@ -69,7 +68,9 @@ const Login = () => {
         />
         <div className={styles.subContainerSign}>
           <p>Não possui conta?</p>
-          <NavLink to="/signup">Cadastrar</NavLink>
+          <NavLink to="/signup">
+            <p className={styles.signupBtn}>Cadastrar</p>
+          </NavLink>
         </div>
       </form>
     </div>

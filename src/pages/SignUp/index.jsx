@@ -18,12 +18,12 @@ import { useContextModal } from '../../context/contextCadastro';
 const userService = new UserService();
 
 const SignUp = () => {
-  const {isLoggedin} = useContext(useContextModal)
+  const { isLoggedin } = useContext(useContextModal);
   const [loading, setLoading] = useState();
   const [form, setForm] = useState([]);
   const navigate = useNavigate();
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async event => {
     event.preventDefault();
     try {
       if(isLoggedin){
@@ -49,7 +49,7 @@ const SignUp = () => {
     }
   };
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     setForm({ ...form, [event.target.name]: event.target.value });
   };
 
@@ -96,14 +96,14 @@ const SignUp = () => {
           onChange={handleChange}
           type="password"
         />
-        
+
         <Input
           name="ocupation"
           placeholder="Digite sua ocupação"
           onChange={handleChange}
           type="text"
         />
-        
+
         <Button
           type="submit"
           text="Cadastrar"
@@ -112,7 +112,9 @@ const SignUp = () => {
         />
         <div className={styles.subContainerSignUp}>
           <p>Já possui conta?</p>
-          <NavLink to="/login"> Faça Login</NavLink>
+          <NavLink to="/login">
+            <p className={styles.loginBtn}>Faça Login</p>
+          </NavLink>
         </div>
       </form>
     </div>

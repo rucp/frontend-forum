@@ -1,1 +1,5 @@
-# frontend-forum
+## Esse projeto foi desenvolvido no hackathon organizado pela escola de programação Let's Code com o tema de Democratização da Educação.
+
+## A ideia do educ@Fórum surgiu após diversas pesquisas e conversas com professores e estudantes, onde percebemos que há muitas teorias sobre educação, mas não encontramos um ambiente onde as pessoas pudessem compartilhar e discutir suas experiências educacionais. Acreditamos que falar sobre Democratização da Educação não implica apenas de falar do acesso ao ambiente educacional, mas também na forma como aprendemos, falando de estudantes, e como ensinamos, falando dos professores. 
+
+## A educação precisa fazer sentido para as pessoas. Não há como pegar o mesmo modelo educacional usado há séculos e dizer que ele se faz sentido para todas as pessoas. Acreditamos que cada pessoa aprende de uma forma, e se houver um ambiente onde todos podem compartilhar e debater sobre experiências que deram certo, teríamos em mão uma ferramenta poderosa que pode mudar a história da Educação.

@@ -31,7 +31,7 @@
 }
 
 .sidebar footer {
-  border-top: 1px solid var(--grey-100);
+  border-top: 2px solid var(--grey-100);
   margin-top: 1.5rem;
   padding: 1.5rem 2rem 2rem;
 }
@@ -45,11 +45,9 @@
   font-weight: bold;
   display: block;
   text-decoration: none;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 0.5rem;
   transition: color 0.1s, background-color 0.1s;
 }
@@ -59,5 +57,9 @@
 }
 
 .buttonPost {
- padding-top: 1.5rem;
+ padding: 0rem 2rem 2rem;
+}
+
+.buttonPost:hover {
+  opacity: 0.7;
 }

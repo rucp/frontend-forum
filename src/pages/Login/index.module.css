@@ -8,7 +8,7 @@
 
 .form {
   display: flex;
-  padding: 3rem;
+  padding: 30px 3rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -17,13 +17,18 @@
   box-shadow: 0 0 0.3em grey;
   width: 100%;
   max-width: 450px;
-  gap: 30px 0px;
+  gap: 20px 0px;
 }
 
 .form h1 {
-  color:  var(--blue-300);
+  color: var(--blue-300);
   font-size: 20px;
   font-weight: light;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 800;
 }
 
 .form p {
@@ -33,7 +38,7 @@
 }
 
 .form a {
-  color:  var(--blue-100);
+  color: var(--blue-100);
   font-size: 14px;
 }
 
@@ -42,4 +47,13 @@
   flex-direction: row;
   gap: 0px 20px;
   align-items: center;
+}
+
+.subContainerSign .signupBtn {
+  color: var(--blue-100);
+  font-size: 14px;
+}
+
+.subContainerSign .signupBtn:hover {
+  color: var(--blue-200);
 }
