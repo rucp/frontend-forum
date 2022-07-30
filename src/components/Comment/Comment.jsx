@@ -12,12 +12,12 @@ export function Comment({ content, commentID, onDeleteComment }) {
 
   function handleDeleteComment() {
     onDeleteComment(commentID);
-    userService.deleteComment(commentID)
+    userService.deleteComment(commentID);
   }
 
   function handleLikeComment() {
     setLikeCount(state => {
-      return thumbsToogle ? state -1 : state + 1;
+      return thumbsToogle ? state - 1 : state + 1;
     });
     setThumbsToogle(!thumbsToogle);
   }
@@ -26,7 +26,7 @@ export function Comment({ content, commentID, onDeleteComment }) {
     <div className={styles.comment}>
       <Avatar
         hasBorder={false}
-        src="https://img.freepik.com/fotos-gratis/adoravel-adolescente-com-cabelo-encaracolado-posando-em-uma-camiseta-amarela_273609-31333.jpg?w=2000"
+        src="https://lead.umn.edu/sites/lead.umn.edu/files/2020-04/default-user-icon.jpg"
         alt=""
       />
 
@@ -34,7 +34,7 @@ export function Comment({ content, commentID, onDeleteComment }) {
         <div className={styles.commentContent}>
           <header>
             <div className={styles.authorAndTime}>
-              <strong>Bruna Amaral</strong>
+              <strong>{localStorage.getItem('nome')}</strong>
               <time title="11 de Maio às 08:13" dateTime="2022-05-11 08:13:30">
                 Cerca de 1h atrás
               </time>

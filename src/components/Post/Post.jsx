@@ -14,24 +14,28 @@ const userService = new UserServices();
 
 export function Post({ author, publishedAt, content, commentsParam, postID }) {
   const [comments, setComments] = useState([]);
-  const [newCommentText, setNewCommentText] = useState('')
+  const [newCommentText, setNewCommentText] = useState('');
 
   useEffect(() => {
-    if (comments.length === 0)
-      setComments(commentsParam) 
-  },[comments]);
+    if (comments.length === 0) setComments(commentsParam);
+  }, [comments]);
 
   async function handleCreateNewComment() {
     event.preventDefault();
-    const inserted = await userService.createComment({"postId": postID,"message": newCommentText});
-    setComments([...comments, {"id": inserted.data.id, "message": newCommentText}])
+    const inserted = await userService.createComment({
+      postId: postID,
+      message: newCommentText,
+    });
+    setComments([
+      ...comments,
+      { id: inserted.data.id, message: newCommentText },
+    ]);
     setNewCommentText('');
   }
 
   function handleNewCommentChange() {
     event.target.setCustomValidity('');
     setNewCommentText(event.target.value);
-    
   }
 
   function handleNewCommentInvalid() {
@@ -39,8 +43,8 @@ export function Post({ author, publishedAt, content, commentsParam, postID }) {
   }
   function deleteComment(commentToDelete) {
     const commentsWithoutDeletedOne = comments.filter(comment => {
-      return comment.id !== commentToDelete; 
-    })
+      return comment.id !== commentToDelete;
+    });
     setComments(commentsWithoutDeletedOne);
   }
   const isNewCommentEmpty = newCommentText.length === 0;
@@ -51,7 +55,7 @@ export function Post({ author, publishedAt, content, commentsParam, postID }) {
         <div className={styles.author}>
           <Avatar src={author.avatarUrl} />
           <div className={styles.authorInfo}>
-            <strong>{author.name}</strong>
+            <strong>{localStorage.getItem('nome')}</strong>
             <span>{author.educationRole}</span>
           </div>
         </div>
@@ -75,7 +79,7 @@ export function Post({ author, publishedAt, content, commentsParam, postID }) {
           value={newCommentText}
           onChange={handleNewCommentChange}
           onInvalid={handleNewCommentInvalid}
-          required 
+          required
         />
         <footer>
           <button type="submit" disabled={isNewCommentEmpty}>
@@ -86,13 +90,13 @@ export function Post({ author, publishedAt, content, commentsParam, postID }) {
       <div className={styles.commentList}>
         {comments.map(comment => {
           return (
-            <Comment 
-              key={comment.id} 
-              content={comment.message} 
+            <Comment
+              key={comment.id}
+              content={comment.message}
               onDeleteComment={deleteComment}
-              commentID={comment.id} 
+              commentID={comment.id}
             />
-          )
+          );
         })}
       </div>
     </article>
