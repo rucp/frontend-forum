@@ -26,15 +26,22 @@ Realizar conexão entre educadores e estudantes onde estes podem:
 
 ```
 
+
 ## 🖼 Screenshot das telas da aplicação 
 
-## 🖼 Tela principal da plataforma do Educ@Fórum
+## 🖼 Telas da página principal da plataforma do Educ@Fórum
+<img src="https://user-images.githubusercontent.com/88854028/181865602-caccec50-1914-4bab-9cea-9955cfdb289e.png" alt=""> 
+<img src="https://user-images.githubusercontent.com/88854028/181865613-1fe2ed85-6c1a-444f-946b-ac47e4d93f71.png" alt=""> 
+<img src="https://user-images.githubusercontent.com/88854028/181865636-4ee782b9-e3f7-4bd3-9ab6-b65bd5fb91a3.png" alt=""> 
 
 ## 🖼 Tela para a criação do cadastro de um novo usuário
+<img src="https://user-images.githubusercontent.com/88854028/181865711-6ef21d5a-0f64-4f96-9e1a-ed34f35cec89.png" alt=""> 
 
 ## 🖼 Tela para Login
+<img src="https://user-images.githubusercontent.com/88854028/181865743-acd5e66e-3502-4466-b058-9440e1362b5f.png" alt=""> 
 
 ## 🖼 Tela home após o usuário fazer Login
+<img src="https://user-images.githubusercontent.com/88854028/181865950-cc14d504-0186-4aaa-a1f3-6cbd163a785b.png" alt=""> 
 
 
 ## 🛠 Tecnologias
@@ -43,9 +50,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 #### **Frontend** 
 - HTML, JavaScript, CSS, ReactJS, Axios
+- Este repositório
 
 #### **Back-end**
 - NodeJS, Express, Typescript, TypeORM, JsonWebToken
+- https://github.com/SuellendaVinci/forum-back-end
 
 # 👷 Como rodar
 
