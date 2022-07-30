@@ -17,6 +17,7 @@ import { useContextModal } from '../../context/contextCadastro';
 
 const userService = new UserService();
 
+
 const SignUp = () => {
   const { isLoggedin } = useContext(useContextModal);
   const [loading, setLoading] = useState();
@@ -26,22 +27,22 @@ const SignUp = () => {
   const handleSubmit = async event => {
     event.preventDefault();
     try {
-      if(isLoggedin){
-        return alert('usuario ja logado')
+      if (isLoggedin) {
+        return alert('usuario ja logado');
       }
       setLoading(true);
-      const data  = await userService.register({
+      const data = await userService.register({
         name: form.name,
         email: form.email,
         password: form.password,
         passwordConfirmation: form.confirmPassword,
         ocupation: form.ocupation,
-        roleId: 1
+        roleId: 1,
       });
 
       if (data) {
-          alert('Usuário Cadastrado com sucesso!');
-          navigate('/login');
+        alert('Usuário Cadastrado com sucesso!');
+        navigate('/login');
       }
       setLoading(false);
     } catch (err) {
@@ -61,12 +62,10 @@ const SignUp = () => {
     );
   };
 
-  validateConfirmPassword(form.password, form.confirm)
-      validateCity(form.city) &&
-  
-      validateGender(form.gender) &&
-     
-      validateOcupation(form.ocupation)
+  validateConfirmPassword(form.password, form.confirm);
+  validateCity(form.city) &&
+    validateGender(form.gender) &&
+    validateOcupation(form.ocupation);
 
   return (
     <div className={styles.container}>
